@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func bulbSwitch(n int) int {
 
@@ -10,8 +13,11 @@ func bulbSwitch(n int) int {
 	}
 	return count
 }
+func better(n int) int {
+	return int(math.Sqrt(float64(n)))
+}
 func main() {
-	fmt.Println(bulbSwitch(6))
-	fmt.Println(bulbSwitch(1))
-	fmt.Println(bulbSwitch(3))
+	fmt.Println(bulbSwitch(6), better(6))
+	fmt.Println(bulbSwitch(1), better(1))
+	fmt.Println(bulbSwitch(3), better(3))
 }
