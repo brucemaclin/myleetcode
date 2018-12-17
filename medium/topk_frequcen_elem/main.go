@@ -67,7 +67,7 @@ func topKFrequent(nums []int, k int) []int {
 			heap.Push(infos, &tmp)
 		}
 	}
-	var result []int = make([]int, k)
+	var result = make([]int, k)
 	var index int
 	for infos.Len() > 0 {
 		items := heap.Pop(infos).(*frequceInfo)
