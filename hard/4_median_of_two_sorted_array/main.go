@@ -9,8 +9,8 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	m := len(nums1)
 	n := len(nums2)
 	if m > n {
-		nums1, nums2 = nums2, nums1
 		m, n = n, m
+		nums1, nums2 = nums2, nums1
 	}
 	iMin := 0
 	iMax := m
